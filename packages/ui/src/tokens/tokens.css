@@ -1,0 +1,4 @@
+/* Layer A → B → C token entry point (no component styles). */
+@import "./primitives.css";
+@import "./semantic.css";
+@import "./component.css";

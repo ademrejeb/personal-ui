@@ -1,0 +1,60 @@
+/* Base document styling driven entirely by semantic tokens. */
+
+:root {
+  font-family: var(--ui-p-font-sans);
+  font-size: 100%;
+  font-synthesis: none;
+  color: var(--ui-foreground);
+  background-color: var(--ui-background);
+}
+
+body {
+  font-size: var(--ui-p-text-sm);
+  color: var(--ui-foreground);
+  background-color: var(--ui-background);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+::selection {
+  background-color: var(--ui-selection);
+}
+
+:focus-visible {
+  outline: none;
+}
+
+a {
+  color: var(--ui-primary-text);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border: none;
+  border-top: var(--ui-p-border-thin) solid var(--ui-border);
+}
+
+/* Scrollbars: subtle, token-aware, opt-in via .ui-scrollbar */
+.ui-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ui-border-strong) transparent;
+}
+
+.ui-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.ui-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--ui-border-strong);
+  border: 3px solid transparent;
+  border-radius: var(--ui-p-radius-full);
+  background-clip: content-box;
+}
+
+.ui-scrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: var(--ui-muted-strong);
+}

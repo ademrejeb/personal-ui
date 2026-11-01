@@ -1,0 +1,448 @@
+/* ==========================================================================
+   Actions — Button, IconButton, ButtonGroup, CopyButton, ToggleButton,
+   ToggleGroup.
+   ========================================================================== */
+
+.ui-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ui-p-space-2);
+  box-sizing: border-box;
+  margin: 0;
+  border: var(--ui-control-border-width) solid transparent;
+  border-radius: var(--ui-control-radius);
+  font-family: inherit;
+  font-weight: var(--ui-button-font-weight);
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background-color var(--ui-p-duration-fast) var(--ui-p-ease-standard),
+    border-color var(--ui-p-duration-fast) var(--ui-p-ease-standard),
+    color var(--ui-p-duration-fast) var(--ui-p-ease-standard),
+    box-shadow var(--ui-p-duration-fast) var(--ui-p-ease-standard);
+}
+
+.ui-button:focus-visible {
+  outline: none;
+  box-shadow: var(--ui-button-focus-ring);
+  z-index: 1;
+}
+
+.ui-button:disabled,
+.ui-button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.ui-button__label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ui-p-space-2);
+  min-width: 0;
+}
+
+.ui-button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.1em;
+}
+
+.ui-button__icon > svg {
+  width: 1em;
+  height: 1em;
+}
+
+.ui-button--loading .ui-button__label {
+  visibility: hidden;
+}
+
+.ui-button__spinner {
+  position: absolute;
+  inset: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ui-button--block {
+  display: flex;
+  width: 100%;
+}
+
+/* ---- Sizes -------------------------------------------------------------- */
+.ui-button--xs {
+  height: var(--ui-p-control-xs);
+  padding-inline: var(--ui-p-space-2);
+  font-size: var(--ui-p-text-2xs);
+  border-radius: var(--ui-p-radius-sm);
+}
+.ui-button--sm {
+  height: var(--ui-p-control-sm);
+  padding-inline: var(--ui-p-space-3);
+  font-size: var(--ui-p-text-xs);
+}
+.ui-button--md {
+  height: var(--ui-p-control-md);
+  padding-inline: var(--ui-p-space-4);
+  font-size: var(--ui-p-text-sm);
+}
+.ui-button--lg {
+  height: var(--ui-p-control-lg);
+  padding-inline: var(--ui-p-space-5);
+  font-size: var(--ui-p-text-sm);
+}
+.ui-button--xl {
+  height: var(--ui-p-control-xl);
+  padding-inline: var(--ui-p-space-6);
+  font-size: var(--ui-p-text-md);
+}
+
+/* ---- Variants ----------------------------------------------------------- */
+.ui-button--primary {
+  background-color: var(--ui-primary);
+  color: var(--ui-primary-foreground);
+  border-color: var(--ui-primary);
+}
+.ui-button--primary:hover {
+  background-color: var(--ui-primary-hover);
+  border-color: var(--ui-primary-hover);
+}
+.ui-button--primary:active {
+  background-color: var(--ui-primary-active);
+  border-color: var(--ui-primary-active);
+}
+
+.ui-button--secondary {
+  background-color: var(--ui-surface-raised);
+  color: var(--ui-foreground);
+  border-color: var(--ui-border);
+}
+.ui-button--secondary:hover {
+  border-color: var(--ui-border-strong);
+  background-color: color-mix(in oklab, var(--ui-foreground) 6%, var(--ui-surface-raised));
+}
+
+.ui-button--outline {
+  background-color: transparent;
+  color: var(--ui-foreground);
+  border-color: var(--ui-border-strong);
+}
+.ui-button--outline:hover {
+  background-color: color-mix(in oklab, var(--ui-foreground) 6%, transparent);
+  border-color: var(--ui-muted-strong);
+}
+
+.ui-button--ghost {
+  background-color: transparent;
+  color: var(--ui-muted);
+  border-color: transparent;
+}
+.ui-button--ghost:hover {
+  background-color: color-mix(in oklab, var(--ui-foreground) 8%, transparent);
+  color: var(--ui-foreground);
+}
+
+.ui-button--danger {
+  background-color: var(--ui-danger);
+  color: var(--ui-danger-foreground);
+  border-color: var(--ui-danger);
+}
+.ui-button--danger:hover {
+  background-color: var(--ui-danger-hover);
+  border-color: var(--ui-danger-hover);
+}
+
+.ui-button--link {
+  height: auto;
+  padding: 0;
+  background-color: transparent;
+  color: var(--ui-primary-text);
+  border-color: transparent;
+  border-radius: var(--ui-p-radius-xs);
+}
+.ui-button--link:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.ui-button--link:focus-visible {
+  box-shadow: none;
+  outline: 2px solid var(--ui-focus-ring);
+  outline-offset: 2px;
+}
+
+/* ---- IconButton --------------------------------------------------------- */
+.ui-icon-button {
+  aspect-ratio: 1 / 1;
+  padding-inline: 0;
+}
+
+.ui-icon-button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ui-icon-button__icon > svg {
+  width: 1.15em;
+  height: 1.15em;
+}
+
+.ui-icon-button--rounded {
+  border-radius: var(--ui-p-radius-full);
+}
+
+/* ---- ButtonGroup -------------------------------------------------------- */
+.ui-button-group {
+  display: inline-flex;
+  gap: var(--ui-p-space-2);
+}
+
+.ui-button-group--vertical {
+  flex-direction: column;
+}
+
+.ui-button-group--block {
+  display: flex;
+  width: 100%;
+}
+
+.ui-button-group--block > .ui-button {
+  flex: 1 1 0;
+}
+
+.ui-button-group--attached {
+  gap: 0;
+}
+
+.ui-button-group--attached > .ui-button:not(:first-child) {
+  margin-inline-start: calc(-1 * var(--ui-control-border-width));
+}
+
+.ui-button-group--attached.ui-button-group--horizontal > .ui-button:not(:first-child) {
+  border-start-start-radius: 0;
+  border-end-start-radius: 0;
+}
+.ui-button-group--attached.ui-button-group--horizontal > .ui-button:not(:last-child) {
+  border-start-end-radius: 0;
+  border-end-end-radius: 0;
+}
+
+.ui-button-group--attached.ui-button-group--vertical > .ui-button:not(:first-child) {
+  margin-block-start: calc(-1 * var(--ui-control-border-width));
+  border-start-start-radius: 0;
+  border-start-end-radius: 0;
+}
+.ui-button-group--attached.ui-button-group--vertical > .ui-button:not(:last-child) {
+  border-end-start-radius: 0;
+  border-end-end-radius: 0;
+}
+
+.ui-button-group--attached > .ui-button:focus-visible {
+  z-index: 2;
+}
+
+/* ---- CopyButton --------------------------------------------------------- */
+.ui-copy-button {
+  flex: none;
+}
+
+.ui-copy-button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 1em;
+  height: 1em;
+  line-height: 0;
+}
+
+.ui-copy-button__icon > svg {
+  width: 1em;
+  height: 1em;
+  display: block;
+}
+
+/* ---- ToggleButton ------------------------------------------------------- */
+.ui-toggle-button[data-state="on"] {
+  background-color: var(--ui-primary-subtle);
+  color: var(--ui-primary-subtle-foreground);
+  border-color: color-mix(in oklab, var(--ui-primary) 45%, transparent);
+}
+
+/* ---- ToggleGroup -------------------------------------------------------- */
+.ui-toggle-group {
+  display: inline-flex;
+  gap: var(--ui-p-space-1);
+  padding: 2px;
+  border-radius: var(--ui-control-radius);
+  background-color: var(--ui-surface-inset);
+}
+
+.ui-toggle-group--vertical {
+  flex-direction: column;
+}
+
+.ui-toggle-group--block {
+  display: flex;
+  width: 100%;
+}
+
+.ui-toggle-group--block > .ui-toggle-group__item {
+  flex: 1 1 0;
+}
+
+.ui-toggle-group--attached {
+  gap: 0;
+}
+
+.ui-toggle-group__item[data-state="on"] {
+  background-color: var(--ui-surface-raised);
+  color: var(--ui-foreground);
+  border-color: var(--ui-border);
+  box-shadow: var(--ui-p-shadow-sm);
+}
+
+.ui-toggle-group__item {
+  font-weight: var(--ui-p-weight-medium);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ui-button {
+    transition: none;
+  }
+}
+
+/* ---- FloatButton -------------------------------------------------------- */
+.ui-float-button {
+  position: fixed;
+  z-index: var(--ui-p-z-sticky);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ui-p-space-2);
+  border: var(--ui-p-border-thin) solid var(--ui-border);
+  background-color: var(--ui-surface-overlay);
+  color: var(--ui-foreground);
+  box-shadow: var(--ui-p-shadow-lg);
+  cursor: pointer;
+  transition:
+    transform var(--ui-p-duration-fast) var(--ui-p-ease-out),
+    box-shadow var(--ui-p-duration-fast) var(--ui-p-ease-out),
+    background-color var(--ui-p-duration-fast) var(--ui-p-ease-out);
+}
+
+.ui-float-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ui-p-shadow-xl);
+}
+
+.ui-float-button:focus-visible {
+  outline: none;
+  box-shadow: var(--ui-p-shadow-lg), 0 0 0 3px var(--ui-focus-ring);
+}
+
+.ui-float-button[data-shape="circle"] {
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border-radius: var(--ui-p-radius-full);
+}
+
+.ui-float-button[data-shape="square"] {
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border-radius: var(--ui-p-radius-lg);
+}
+
+.ui-float-button[data-shape="pill"] {
+  min-height: 3rem;
+  padding: 0 var(--ui-p-space-4);
+  border-radius: var(--ui-p-radius-full);
+}
+
+.ui-float-button[data-variant="primary"] {
+  background-color: var(--ui-primary);
+  border-color: transparent;
+  color: var(--ui-primary-foreground);
+}
+
+.ui-float-button[data-position="bottom-right"] {
+  right: calc(var(--ui-p-space-6) + var(--ui-float-button-offset, 0px));
+  bottom: calc(var(--ui-p-space-6) + var(--ui-float-button-offset, 0px));
+}
+.ui-float-button[data-position="bottom-left"] {
+  left: calc(var(--ui-p-space-6) + var(--ui-float-button-offset, 0px));
+  bottom: calc(var(--ui-p-space-6) + var(--ui-float-button-offset, 0px));
+}
+.ui-float-button[data-position="top-right"] {
+  right: calc(var(--ui-p-space-6) + var(--ui-float-button-offset, 0px));
+  top: calc(var(--ui-p-space-6) + var(--ui-float-button-offset, 0px));
+}
+.ui-float-button[data-position="top-left"] {
+  left: calc(var(--ui-p-space-6) + var(--ui-float-button-offset, 0px));
+  top: calc(var(--ui-p-space-6) + var(--ui-float-button-offset, 0px));
+}
+
+.ui-float-button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ui-float-button__label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: var(--ui-p-leading-tight);
+  font-size: var(--ui-p-text-sm);
+  font-weight: var(--ui-p-weight-medium);
+}
+
+.ui-float-button__description {
+  color: var(--ui-muted);
+  font-size: var(--ui-p-text-2xs);
+  font-weight: var(--ui-p-weight-regular);
+}
+
+.ui-float-button[data-variant="primary"] .ui-float-button__description {
+  color: inherit;
+  opacity: 0.8;
+}
+
+.ui-float-button__badge {
+  position: absolute;
+  top: -0.25rem;
+  right: -0.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  padding: 0 var(--ui-p-space-1);
+  border-radius: var(--ui-p-radius-full);
+  background-color: var(--ui-danger);
+  color: var(--ui-danger-foreground);
+  font-size: var(--ui-p-text-2xs);
+  font-weight: var(--ui-p-weight-semibold);
+  line-height: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ui-float-button {
+    transition: none;
+  }
+  .ui-float-button:hover {
+    transform: none;
+  }
+}

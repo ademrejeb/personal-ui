@@ -1,0 +1,187 @@
+/**
+ * Layer B — Semantic tokens.
+ * Components map intent (surface, foreground, primary, danger…) to these.
+ * Themes swap only these values; a component never hard-codes a raw color.
+ *
+ * Theme resolution order:
+ *   1. [data-theme="dark"] / [data-theme="light"] — explicit choice.
+ *   2. No attribute, or [data-theme="system"] — follows prefers-color-scheme.
+ * Dark is the canonical default.
+ */
+
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --ui-background: var(--ui-p-neutral-950);
+  --ui-background-subtle: var(--ui-p-neutral-900);
+  --ui-foreground: var(--ui-p-neutral-25);
+
+  --ui-surface: var(--ui-p-neutral-900);
+  --ui-surface-raised: var(--ui-p-neutral-800);
+  --ui-surface-overlay: var(--ui-p-neutral-850);
+  --ui-surface-inset: var(--ui-p-neutral-950);
+
+  --ui-border: var(--ui-p-neutral-700);
+  --ui-border-strong: var(--ui-p-neutral-600);
+  --ui-border-subtle: #1e1e22;
+
+  --ui-muted: var(--ui-p-neutral-300);
+  --ui-muted-strong: var(--ui-p-neutral-350);
+  --ui-subtle: var(--ui-p-neutral-400);
+
+  /* Solid primary must carry white text at >= 4.5:1, so the dark theme uses the
+     600/700/800 steps rather than the lighter 500/400/600. */
+  --ui-primary: var(--ui-p-accent-600);
+  --ui-primary-hover: var(--ui-p-accent-700);
+  --ui-primary-active: var(--ui-p-accent-800);
+  --ui-primary-foreground: var(--ui-p-neutral-0);
+  /* `--ui-primary` fills (button/checkbox/calendar) carry white text, so it must
+     stay dark; anything that renders primary as *text* on a dark surface uses
+     this lighter step to keep body-text contrast. */
+  --ui-primary-text: var(--ui-p-accent-400);
+  --ui-primary-subtle: color-mix(in oklab, var(--ui-p-accent-500) 18%, transparent);
+  --ui-primary-subtle-foreground: var(--ui-p-accent-200);
+
+  --ui-success: var(--ui-p-green-600);
+  --ui-success-foreground: var(--ui-p-neutral-0);
+  --ui-success-subtle: color-mix(in oklab, var(--ui-p-green-500) 16%, transparent);
+  --ui-success-subtle-foreground: var(--ui-p-green-400);
+
+  --ui-warning: var(--ui-p-amber-500);
+  --ui-warning-foreground: var(--ui-p-neutral-950);
+  --ui-warning-subtle: color-mix(in oklab, var(--ui-p-amber-500) 16%, transparent);
+  --ui-warning-subtle-foreground: var(--ui-p-amber-400);
+
+  --ui-danger: var(--ui-p-red-600);
+  --ui-danger-hover: var(--ui-p-red-700);
+  --ui-danger-foreground: var(--ui-p-neutral-0);
+  --ui-danger-text: var(--ui-p-red-400);
+  --ui-danger-subtle: color-mix(in oklab, var(--ui-p-red-500) 16%, transparent);
+  --ui-danger-subtle-foreground: var(--ui-p-red-400);
+
+  --ui-info: var(--ui-p-blue-600);
+  --ui-info-foreground: var(--ui-p-neutral-0);
+  --ui-info-subtle: color-mix(in oklab, var(--ui-p-blue-500) 16%, transparent);
+  --ui-info-subtle-foreground: var(--ui-p-blue-400);
+
+  --ui-focus-ring: color-mix(in oklab, var(--ui-p-accent-400) 70%, transparent);
+  --ui-selection: color-mix(in oklab, var(--ui-p-accent-500) 32%, transparent);
+  --ui-scrim: rgb(4 4 6 / 0.66);
+  --ui-track: var(--ui-p-neutral-750);
+
+  --ui-shadow-color: rgb(0 0 0 / 0.5);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+
+  --ui-background: var(--ui-p-neutral-25);
+  --ui-background-subtle: var(--ui-p-neutral-50);
+  --ui-foreground: var(--ui-p-neutral-950);
+
+  --ui-surface: var(--ui-p-neutral-0);
+  --ui-surface-raised: var(--ui-p-neutral-0);
+  --ui-surface-overlay: var(--ui-p-neutral-0);
+  --ui-surface-inset: var(--ui-p-neutral-50);
+
+  --ui-border: var(--ui-p-neutral-100);
+  --ui-border-strong: var(--ui-p-neutral-200);
+  --ui-border-subtle: #f0f0ef;
+
+  --ui-muted: var(--ui-p-neutral-500);
+  --ui-muted-strong: var(--ui-p-neutral-600);
+  --ui-subtle: var(--ui-p-neutral-400);
+
+  --ui-primary: var(--ui-p-accent-600);
+  --ui-primary-hover: var(--ui-p-accent-700);
+  --ui-primary-active: var(--ui-p-accent-800);
+  --ui-primary-foreground: var(--ui-p-neutral-0);
+  --ui-primary-text: var(--ui-p-accent-600);
+  --ui-primary-subtle: color-mix(in oklab, var(--ui-p-accent-600) 12%, transparent);
+  --ui-primary-subtle-foreground: var(--ui-p-accent-700);
+
+  --ui-success: var(--ui-p-green-600);
+  --ui-success-foreground: var(--ui-p-neutral-0);
+  --ui-success-subtle: color-mix(in oklab, var(--ui-p-green-600) 12%, transparent);
+  --ui-success-subtle-foreground: var(--ui-p-green-700);
+
+  --ui-warning: var(--ui-p-amber-500);
+  --ui-warning-foreground: var(--ui-p-neutral-950);
+  --ui-warning-subtle: color-mix(in oklab, var(--ui-p-amber-500) 18%, transparent);
+  --ui-warning-subtle-foreground: var(--ui-p-amber-600);
+
+  --ui-danger: var(--ui-p-red-600);
+  --ui-danger-hover: var(--ui-p-red-700);
+  --ui-danger-foreground: var(--ui-p-neutral-0);
+  --ui-danger-text: var(--ui-p-red-600);
+  --ui-danger-subtle: color-mix(in oklab, var(--ui-p-red-600) 12%, transparent);
+  --ui-danger-subtle-foreground: var(--ui-p-red-700);
+
+  --ui-info: var(--ui-p-blue-600);
+  --ui-info-foreground: var(--ui-p-neutral-0);
+  --ui-info-subtle: color-mix(in oklab, var(--ui-p-blue-600) 12%, transparent);
+  --ui-info-subtle-foreground: var(--ui-p-blue-600);
+
+  --ui-focus-ring: color-mix(in oklab, var(--ui-p-accent-600) 55%, transparent);
+  --ui-selection: color-mix(in oklab, var(--ui-p-accent-500) 24%, transparent);
+  --ui-scrim: rgb(9 9 11 / 0.42);
+  --ui-track: var(--ui-p-neutral-100);
+
+  --ui-shadow-color: rgb(9 9 11 / 0.12);
+}
+
+/* System preference: only when no explicit dark/light choice is present. */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]):not([data-theme="light"]),
+  [data-theme="system"] {
+    color-scheme: light;
+
+    --ui-background: var(--ui-p-neutral-25);
+    --ui-background-subtle: var(--ui-p-neutral-50);
+    --ui-foreground: var(--ui-p-neutral-950);
+
+    --ui-surface: var(--ui-p-neutral-0);
+    --ui-surface-raised: var(--ui-p-neutral-0);
+    --ui-surface-overlay: var(--ui-p-neutral-0);
+    --ui-surface-inset: var(--ui-p-neutral-50);
+
+    --ui-border: var(--ui-p-neutral-100);
+    --ui-border-strong: var(--ui-p-neutral-200);
+    --ui-border-subtle: #f0f0ef;
+
+    --ui-muted: var(--ui-p-neutral-500);
+    --ui-muted-strong: var(--ui-p-neutral-600);
+    --ui-subtle: var(--ui-p-neutral-400);
+
+    --ui-primary: var(--ui-p-accent-600);
+    --ui-primary-hover: var(--ui-p-accent-700);
+    --ui-primary-active: var(--ui-p-accent-800);
+    --ui-primary-foreground: var(--ui-p-neutral-0);
+    --ui-primary-text: var(--ui-p-accent-600);
+    --ui-primary-subtle: color-mix(in oklab, var(--ui-p-accent-600) 12%, transparent);
+    --ui-primary-subtle-foreground: var(--ui-p-accent-700);
+
+    --ui-success: var(--ui-p-green-600);
+    --ui-success-subtle: color-mix(in oklab, var(--ui-p-green-600) 12%, transparent);
+    --ui-success-subtle-foreground: var(--ui-p-green-700);
+
+    --ui-warning-subtle: color-mix(in oklab, var(--ui-p-amber-500) 18%, transparent);
+    --ui-warning-subtle-foreground: var(--ui-p-amber-600);
+
+    --ui-danger: var(--ui-p-red-600);
+    --ui-danger-text: var(--ui-p-red-600);
+    --ui-danger-subtle: color-mix(in oklab, var(--ui-p-red-600) 12%, transparent);
+    --ui-danger-subtle-foreground: var(--ui-p-red-700);
+
+    --ui-info: var(--ui-p-blue-600);
+    --ui-info-subtle: color-mix(in oklab, var(--ui-p-blue-600) 12%, transparent);
+    --ui-info-subtle-foreground: var(--ui-p-blue-600);
+
+    --ui-focus-ring: color-mix(in oklab, var(--ui-p-accent-600) 55%, transparent);
+    --ui-selection: color-mix(in oklab, var(--ui-p-accent-500) 24%, transparent);
+    --ui-scrim: rgb(9 9 11 / 0.42);
+    --ui-track: var(--ui-p-neutral-100);
+    --ui-shadow-color: rgb(9 9 11 / 0.12);
+  }
+}

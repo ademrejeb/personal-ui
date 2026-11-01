@@ -1,0 +1,64 @@
+{
+  "name": "personal-ui",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A premium personal design system and interactive component lab.",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace @personal-ui/component-lab",
+    "build": "npm run build:ui && npm run build:lab",
+    "build:ui": "npm run build --workspace @personal-ui/ui",
+    "build:lab": "npm run build --workspace @personal-ui/component-lab",
+    "preview": "npm run preview --workspace @personal-ui/component-lab",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "playwright test",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "manifest": "node scripts/build-manifest.mjs",
+    "graph:update": "python -m graphify update .",
+    "graph:query": "python -m graphify query",
+    "graph:explain": "python -m graphify explain",
+    "graph:path": "python -m graphify path",
+    "clean": "node -e \"const{rmSync}=require('fs');['packages/ui/dist','apps/component-lab/dist'].forEach(p=>rmSync(p,{recursive:true,force:true}))\""
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@playwright/test": "^1.49.1",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/node": "^22.10.5",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "@vitest/coverage-v8": "^2.1.8",
+    "eslint": "^9.17.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "globals": "^15.14.0",
+    "jsdom": "^25.0.1",
+    "prettier": "^3.4.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.19.0",
+    "vite": "^6.0.7",
+    "vitest": "^2.1.8"
+  },
+  "dependencies": {
+    "lucide-react": "^0.469.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

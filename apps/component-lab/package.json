@@ -1,0 +1,22 @@
+{
+  "name": "@personal-ui/component-lab",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Interactive component lab, playground, and token inspector for @personal-ui/ui.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -p tsconfig.json --noEmit && vite build",
+    "preview": "vite preview --port 4173 --strictPort"
+  },
+  "dependencies": {
+    "@personal-ui/ui": "0.1.0",
+    "lucide-react": "^0.469.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.7"
+  }
+}

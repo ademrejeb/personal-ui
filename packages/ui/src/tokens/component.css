@@ -1,0 +1,128 @@
+/**
+ * Layer C — Component tokens.
+ * Narrow, purpose-specific values derived from primitives/semantics.
+ * These are the sanctioned override surface for consumers.
+ */
+
+:root {
+  /* Focus */
+  --ui-focus-ring-width: 2px;
+  --ui-focus-ring-offset: 2px;
+
+  /* Control geometry */
+  --ui-control-radius: var(--ui-p-radius-md);
+  --ui-control-radius-sm: var(--ui-p-radius-sm);
+  --ui-control-radius-lg: var(--ui-p-radius-lg);
+  --ui-control-border-width: var(--ui-p-border-thin);
+  --ui-control-gap: var(--ui-p-space-2);
+  --ui-control-pad-x-sm: var(--ui-p-space-3);
+  --ui-control-pad-x-md: var(--ui-p-space-4);
+  --ui-control-pad-x-lg: var(--ui-p-space-5);
+
+  /* Button */
+  --ui-button-focus-ring: 0 0 0 var(--ui-focus-ring-width) var(--ui-background),
+    0 0 0 calc(var(--ui-focus-ring-width) + var(--ui-focus-ring-offset)) var(--ui-focus-ring);
+  --ui-button-font-weight: var(--ui-p-weight-medium);
+
+  /* Input */
+  --ui-input-pad-x: var(--ui-p-space-3);
+  --ui-input-placeholder: var(--ui-subtle);
+
+  /* Card */
+  --ui-card-pad: var(--ui-p-space-6);
+  --ui-card-radius: var(--ui-p-radius-xl);
+
+  /* Surface/overlay */
+  --ui-overlay-radius: var(--ui-p-radius-xl);
+  --ui-overlay-pad: var(--ui-p-space-5);
+  --ui-overlay-shadow: var(--ui-p-shadow-lg);
+
+  /* Tooltip */
+  --ui-tooltip-bg: var(--ui-p-neutral-800);
+  --ui-tooltip-fg: var(--ui-p-neutral-25);
+  --ui-tooltip-radius: var(--ui-p-radius-sm);
+
+  /* Table */
+  --ui-table-header-bg: var(--ui-surface-inset);
+  --ui-table-row-hover: color-mix(in oklab, var(--ui-foreground) 4%, transparent);
+  --ui-table-row-selected: var(--ui-primary-subtle);
+  --ui-table-cell-pad-x: var(--ui-p-space-4);
+  --ui-table-cell-pad-y: var(--ui-p-space-3);
+
+  /* Toast */
+  --ui-toast-width: 24rem;
+  --ui-toast-radius: var(--ui-p-radius-lg);
+
+  /* Collapsible */
+  --ui-collapsible-radius: var(--ui-p-radius-lg);
+  --ui-collapsible-border-width: var(--ui-p-border-thin);
+  --ui-collapsible-pad-x: var(--ui-p-space-5);
+  --ui-collapsible-pad-y: var(--ui-p-space-4);
+
+  /* HoverCard */
+  --ui-hovercard-width: 20rem;
+  --ui-hovercard-pad: var(--ui-overlay-pad);
+  --ui-hovercard-radius: var(--ui-p-radius-lg);
+  --ui-hovercard-arrow-size: 0.55rem;
+
+  /* Carousel */
+  --ui-carousel-gap: var(--ui-p-space-3);
+  --ui-carousel-radius: var(--ui-p-radius-lg);
+  --ui-carousel-slide-radius: var(--ui-p-radius-md);
+  --ui-carousel-control-size: 2.25rem;
+  --ui-carousel-dot-size: 0.5rem;
+  --ui-carousel-dot-active: 1.25rem;
+
+  /* TreeView / TreeSelect */
+  --ui-tree-indent: var(--ui-p-space-4);
+  --ui-tree-row-radius: var(--ui-p-radius-sm);
+  --ui-tree-row-pad-x: var(--ui-p-space-2);
+  --ui-tree-row-pad-y: var(--ui-p-space-1);
+  --ui-tree-guide-color: var(--ui-border);
+  --ui-tree-toggle-size: 1.25rem;
+  --ui-treeselect-radius: var(--ui-p-radius-lg);
+  --ui-treeselect-max-height: 20rem;
+  --ui-treeselect-clear-inset: calc(var(--ui-input-pad-x) + 1.25rem);
+
+  /* Cascader */
+  --ui-cascader-radius: var(--ui-p-radius-lg);
+  --ui-cascader-column-width: 11rem;
+  --ui-cascader-menu-max-width: 34rem;
+  --ui-cascader-max-height: 18rem;
+  --ui-cascader-active-bg: color-mix(in oklab, var(--ui-foreground) 8%, transparent);
+  --ui-cascader-clear-inset: calc(var(--ui-input-pad-x) + 1.25rem);
+
+  /* Transfer */
+  --ui-transfer-radius: var(--ui-p-radius-md);
+
+  /* Rating */
+  --ui-rating-gap: var(--ui-p-space-1);
+  --ui-rating-filled: var(--ui-p-amber-400);
+  --ui-rating-empty: var(--ui-border-strong);
+
+  /* Segmented control */
+  --ui-segmented-radius: var(--ui-p-radius-md);
+  --ui-segmented-item-radius: var(--ui-p-radius-sm);
+  --ui-segmented-pad-x: var(--ui-p-space-3);
+  --ui-segmented-pad-y: var(--ui-p-space-1);
+
+  /* Colour picker */
+  --ui-colorpicker-radius: var(--ui-p-radius-lg);
+  --ui-colorpicker-popup-width: 16rem;
+  --ui-colorpicker-swatch-size: 1.25rem;
+  --ui-colorpicker-swatch-radius: var(--ui-p-radius-sm);
+  --ui-colorpicker-trigger-min-width: 4rem;
+  --ui-colorpicker-native-height: 2.25rem;
+
+  /* Charts */
+  --ui-chart-1: var(--ui-p-accent-500);
+  --ui-chart-2: var(--ui-p-blue-500);
+  --ui-chart-3: var(--ui-p-green-500);
+  --ui-chart-4: var(--ui-p-amber-500);
+  --ui-chart-5: var(--ui-p-red-500);
+  --ui-chart-6: var(--ui-p-accent-300);
+  --ui-chart-grid: var(--ui-border);
+  --ui-chart-axis: var(--ui-muted);
+  --ui-chart-area-opacity: 0.18;
+  --ui-chart-gap: var(--ui-p-space-3);
+}

@@ -1,0 +1,164 @@
+/**
+ * Layer A — Primitive tokens.
+ * Raw, context-free values. Never referenced directly by components;
+ * components consume Layer B (semantic) and Layer C (component) tokens.
+ */
+
+:root {
+  /* ---- Neutral ramp (zinc-adjacent, hand-tuned) ---- */
+  --ui-p-neutral-0: #ffffff;
+  --ui-p-neutral-25: #fafaf9;
+  --ui-p-neutral-50: #f4f4f5;
+  --ui-p-neutral-100: #e4e4e7;
+  --ui-p-neutral-200: #d4d4d8;
+  --ui-p-neutral-300: #a1a1aa;
+  --ui-p-neutral-350: #8b8b95;
+  --ui-p-neutral-400: #71717a;
+  --ui-p-neutral-500: #52525b;
+  --ui-p-neutral-600: #3f3f46;
+  --ui-p-neutral-700: #27272a;
+  --ui-p-neutral-750: #1f1f23;
+  --ui-p-neutral-800: #18181b;
+  --ui-p-neutral-850: #141417;
+  --ui-p-neutral-900: #111114;
+  --ui-p-neutral-950: #09090b;
+
+  /* ---- Accent: restrained indigo/violet ---- */
+  --ui-p-accent-50: #eef0ff;
+  --ui-p-accent-100: #e0e2ff;
+  --ui-p-accent-200: #c7caff;
+  --ui-p-accent-300: #a5a8ff;
+  --ui-p-accent-400: #8386fb;
+  --ui-p-accent-500: #6c70f2;
+  --ui-p-accent-600: #5b5bdb;
+  --ui-p-accent-700: #4a49b8;
+  --ui-p-accent-800: #3d3d94;
+  --ui-p-accent-900: #343475;
+
+  /* ---- Semantic hues ---- */
+  --ui-p-green-400: #34d399;
+  --ui-p-green-500: #10b981;
+  --ui-p-green-600: #059669;
+  --ui-p-green-700: #047857;
+
+  --ui-p-amber-400: #fbbf24;
+  --ui-p-amber-500: #f59e0b;
+  --ui-p-amber-600: #d97706;
+
+  --ui-p-red-400: #f87171;
+  --ui-p-red-500: #ef4444;
+  --ui-p-red-600: #dc2626;
+  --ui-p-red-700: #b91c1c;
+
+  --ui-p-blue-400: #60a5fa;
+  --ui-p-blue-500: #3b82f6;
+  --ui-p-blue-600: #2563eb;
+
+  /* ---- Typography ---- */
+  --ui-p-font-sans:
+    "Inter var", Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  --ui-p-font-mono:
+    "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono",
+    monospace;
+
+  --ui-p-text-3xs: 0.6875rem; /* 11px */
+  --ui-p-text-2xs: 0.75rem; /* 12px */
+  --ui-p-text-xs: 0.8125rem; /* 13px */
+  --ui-p-text-sm: 0.875rem; /* 14px */
+  --ui-p-text-md: 1rem; /* 16px */
+  --ui-p-text-lg: 1.125rem; /* 18px */
+  --ui-p-text-xl: 1.25rem; /* 20px */
+  --ui-p-text-2xl: 1.5rem; /* 24px */
+  --ui-p-text-3xl: 1.875rem; /* 30px */
+  --ui-p-text-4xl: 2.25rem; /* 36px */
+  --ui-p-text-5xl: 3rem; /* 48px */
+
+  --ui-p-weight-regular: 400;
+  --ui-p-weight-medium: 500;
+  --ui-p-weight-semibold: 600;
+  --ui-p-weight-bold: 700;
+
+  --ui-p-leading-tight: 1.2;
+  --ui-p-leading-snug: 1.375;
+  --ui-p-leading-normal: 1.5;
+  --ui-p-leading-relaxed: 1.65;
+
+  --ui-p-tracking-tight: -0.02em;
+  --ui-p-tracking-normal: 0;
+  --ui-p-tracking-wide: 0.02em;
+  --ui-p-tracking-wider: 0.06em;
+
+  /* ---- Spacing (4px base) ---- */
+  --ui-p-space-0: 0;
+  --ui-p-space-px: 1px;
+  --ui-p-space-0-5: 0.125rem;
+  --ui-p-space-1: 0.25rem;
+  --ui-p-space-1-5: 0.375rem;
+  --ui-p-space-2: 0.5rem;
+  --ui-p-space-3: 0.75rem;
+  --ui-p-space-4: 1rem;
+  --ui-p-space-5: 1.25rem;
+  --ui-p-space-6: 1.5rem;
+  --ui-p-space-8: 2rem;
+  --ui-p-space-10: 2.5rem;
+  --ui-p-space-12: 3rem;
+  --ui-p-space-16: 4rem;
+  --ui-p-space-20: 5rem;
+  --ui-p-space-24: 6rem;
+
+  /* ---- Radii ---- */
+  --ui-p-radius-none: 0;
+  --ui-p-radius-xs: 3px;
+  --ui-p-radius-sm: 5px;
+  --ui-p-radius-md: 7px;
+  --ui-p-radius-lg: 10px;
+  --ui-p-radius-xl: 14px;
+  --ui-p-radius-2xl: 20px;
+  --ui-p-radius-full: 9999px;
+
+  /* ---- Border widths ---- */
+  --ui-p-border-thin: 1px;
+  --ui-p-border-thick: 2px;
+
+  /* ---- Component heights (control sizes) ---- */
+  --ui-p-control-xs: 1.5rem; /* 24px */
+  --ui-p-control-sm: 1.875rem; /* 30px */
+  --ui-p-control-md: 2.25rem; /* 36px */
+  --ui-p-control-lg: 2.75rem; /* 44px */
+  --ui-p-control-xl: 3.25rem; /* 52px */
+
+  /* ---- Shadows / elevation ---- */
+  --ui-p-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --ui-p-shadow-md: 0 2px 6px -1px rgb(0 0 0 / 0.08), 0 1px 2px -1px rgb(0 0 0 / 0.06);
+  --ui-p-shadow-lg: 0 12px 28px -8px rgb(0 0 0 / 0.18), 0 4px 10px -4px rgb(0 0 0 / 0.12);
+  --ui-p-shadow-xl: 0 24px 48px -12px rgb(0 0 0 / 0.28);
+
+  /* ---- Motion ---- */
+  --ui-p-duration-instant: 60ms;
+  --ui-p-duration-fast: 120ms;
+  --ui-p-duration-base: 160ms;
+  --ui-p-duration-slow: 240ms;
+  --ui-p-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ui-p-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ui-p-ease-in: cubic-bezier(0.4, 0, 1, 1);
+
+  /* ---- Z-index layers ---- */
+  --ui-p-z-base: 0;
+  --ui-p-z-raised: 10;
+  --ui-p-z-sticky: 100;
+  --ui-p-z-drawer: 200;
+  --ui-p-z-overlay: 300;
+  --ui-p-z-popover: 400;
+  --ui-p-z-modal: 500;
+  --ui-p-z-toast: 600;
+  --ui-p-z-tooltip: 700;
+  --ui-p-z-max: 9999;
+
+  /* ---- Layout ---- */
+  --ui-p-container-sm: 40rem;
+  --ui-p-container-md: 56rem;
+  --ui-p-container-lg: 72rem;
+  --ui-p-container-xl: 84rem;
+  --ui-p-content-measure: 68ch;
+}
