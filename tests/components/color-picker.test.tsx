@@ -10,7 +10,7 @@ import {
   rgbToHsl,
   toHex,
   toHexWithAlpha,
-} from "@personal-ui/ui";
+} from "@adem.rejeb/ui";
 
 describe("colour utilities", () => {
   it("parses hex, rgb() and hsl() strings", () => {

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { Transfer, type TransferItem } from "@personal-ui/ui";
+import { Transfer, type TransferItem } from "@adem.rejeb/ui";
 
 const ITEMS: TransferItem[] = [
   { key: "a", label: "Alpha", description: "First" },

@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { FloatingLayer } from "@personal-ui/ui";
+import { FloatingLayer } from "@adem.rejeb/ui";
 
 interface HarnessProps {
   open: boolean;

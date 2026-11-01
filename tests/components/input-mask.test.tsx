@@ -9,7 +9,7 @@ import {
   parseMask,
   unmaskValue,
   type InputMaskProps,
-} from "@personal-ui/ui";
+} from "@adem.rejeb/ui";
 
 const PHONE = "(999) 999-9999";
 

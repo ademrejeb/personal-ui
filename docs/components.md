@@ -3,7 +3,7 @@
 Everything below is exported from the package root:
 
 ```ts
-import { Button, Card, Tabs } from "@personal-ui/ui";
+import { Button, Card, Tabs } from "@adem.rejeb/ui";
 ```
 
 Compound parts are available both as static members (`Card.Header`, `Tabs.List`) and as named exports (`CardHeader`, `TabsList`). Run the lab (`npm run dev`) for live previews, editable controls, and full prop tables.
@@ -239,7 +239,7 @@ native elements.
 | `useHoverCard` | `HoverCard` | Open delays, hover/focus intent, positioning. |
 
 ```tsx
-import { useDisclosure } from "@personal-ui/ui";
+import { useDisclosure } from "@adem.rejeb/ui";
 
 function Details() {
   const { open, onToggle } = useDisclosure();

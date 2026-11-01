@@ -20,7 +20,7 @@ import {
   type AlertVariant,
   type Status,
   type ToastPosition,
-} from "@personal-ui/ui";
+} from "@adem.rejeb/ui";
 import type { ComponentEntry } from "./types";
 import { bool, num, pick, str } from "./demo";
 import { jsx } from "../lib/jsx";
@@ -36,7 +36,7 @@ function NotificationTrigger() {
         notify({
           variant: "success",
           title: "Deploy complete",
-          description: "personal-ui@0.2.0 is live in production.",
+          description: "adem.rejeb@0.2.0 is live in production.",
           actions: (
             <Button size="sm" variant="outline">
               View release

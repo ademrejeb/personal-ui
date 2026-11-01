@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Input, useTheme } from "@personal-ui/ui";
+import { Input, useTheme } from "@adem.rejeb/ui";
 import {
   TOKEN_GROUPS,
   classifyToken,

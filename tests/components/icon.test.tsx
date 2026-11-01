@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { render, screen } from "@testing-library/react";
-import { getIcon, Icon, iconNames, iconRegistry } from "@personal-ui/ui";
+import { getIcon, Icon, iconNames, iconRegistry } from "@adem.rejeb/ui";
 import { Search } from "lucide-react";
 
 describe("Icon", () => {

@@ -10,9 +10,9 @@ export default defineConfig({
     // Resolve the design system to source so the lab always reflects the
     // working tree (no need to rebuild `dist` before running the playground).
     alias: [
-      { find: "@personal-ui/ui/styles.css", replacement: `${uiSrc}/styles/index.css` },
-      { find: "@personal-ui/ui/tokens.css", replacement: `${uiSrc}/tokens/tokens.css` },
-      { find: "@personal-ui/ui", replacement: `${uiSrc}/index.ts` },
+      { find: "@adem.rejeb/ui/styles.css", replacement: `${uiSrc}/styles/index.css` },
+      { find: "@adem.rejeb/ui/tokens.css", replacement: `${uiSrc}/tokens/tokens.css` },
+      { find: "@adem.rejeb/ui", replacement: `${uiSrc}/index.ts` },
     ],
   },
   server: { port: 5173 },

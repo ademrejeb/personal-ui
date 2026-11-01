@@ -8,7 +8,7 @@ import {
   PopoverContent,
   PopoverTrigger,
   Tooltip,
-} from "@personal-ui/ui";
+} from "@adem.rejeb/ui";
 
 describe("Popover", () => {
   function Demo() {

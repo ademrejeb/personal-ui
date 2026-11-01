@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { Alert, Progress, Spinner, StatusIndicator } from "@personal-ui/ui";
+import { Alert, Progress, Spinner, StatusIndicator } from "@adem.rejeb/ui";
 
 describe("Alert", () => {
   it("uses role=alert for urgent variants", () => {

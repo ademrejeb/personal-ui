@@ -11,8 +11,8 @@ export default defineConfig({
   plugins: [react()] as unknown as UserConfig["plugins"],
   resolve: {
     alias: {
-      "@personal-ui/ui": `${uiSrc}/index.ts`,
-      "@personal-ui/ui/": `${uiSrc}/`,
+      "@adem.rejeb/ui": `${uiSrc}/index.ts`,
+      "@adem.rejeb/ui/": `${uiSrc}/`,
     },
   },
   test: {

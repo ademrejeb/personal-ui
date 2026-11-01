@@ -2,8 +2,8 @@
 
 A premium, accessible, token-driven React 19 + TypeScript design system, bundled with an interactive Storybook-style component lab.
 
-- **`@personal-ui/ui`** - the library: 135 components across 10 categories, hand-written CSS, zero runtime dependencies beyond `react`, `react-dom`, and `lucide-react`.
-- **`@personal-ui/component-lab`** — a Vite app with a schema-driven playground, live JSX code generation, a component catalog, a token inspector, and a theme switcher.
+- **`@adem.rejeb/ui`** - the library: 135 components across 10 categories, hand-written CSS, zero runtime dependencies beyond `react`, `react-dom`, and `lucide-react`.
+- **`@adem.rejeb/component-lab`** — a Vite app with a schema-driven playground, live JSX code generation, a component catalog, a token inspector, and a theme switcher.
 
 ## Stack
 
@@ -24,7 +24,7 @@ No component framework (Radix, MUI, Ant, Chakra, Mantine, …) and no utility CS
 
 ```
 ui/
-├─ packages/ui/            @personal-ui/ui
+├─ packages/ui/            @adem.rejeb/ui
 │  ├─ src/tokens/          CSS custom properties (source of truth)
 │  ├─ src/styles/          reset, base, and 9 component stylesheets
 │  ├─ src/components/      layout, typography, actions, forms, feedback,
@@ -33,7 +33,7 @@ ui/
 │  ├─ src/utilities/       cx, dom, focus, position, polymorphic, aria, …
 │  ├─ src/primitives/      Portal
 │  └─ scripts/build-css.mjs
-├─ apps/component-lab/     @personal-ui/component-lab
+├─ apps/component-lab/     @adem.rejeb/component-lab
 │  └─ src/registry/        one file per category documenting all 135 components
 ├─ tests/                  Vitest suites (+ tests/e2e Playwright specs)
 └─ docs/                   Architecture, theming, component catalog, lab guide
@@ -50,7 +50,7 @@ Other scripts:
 
 ```bash
 npm run build        # build the library, then the lab
-npm run build:ui     # build @personal-ui/ui only (JS + styles.css + tokens.css)
+npm run build:ui     # build @adem.rejeb/ui only (JS + styles.css + tokens.css)
 npm run build:lab    # build the lab (static site)
 npm run preview      # preview the built lab
 npm run test         # Vitest unit + integration suites
@@ -65,8 +65,8 @@ npm run clean        # remove dist artifacts
 ## Using the library
 
 ```tsx
-import { ThemeProvider, Button, Card, CardHeader, Stack } from "@personal-ui/ui";
-import "@personal-ui/ui/styles.css";
+import { ThemeProvider, Button, Card, CardHeader, Stack } from "@adem.rejeb/ui";
+import "@adem.rejeb/ui/styles.css";
 
 export function App() {
   return (

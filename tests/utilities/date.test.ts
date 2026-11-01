@@ -14,7 +14,7 @@ import {
   startOfMonth,
   startOfWeek,
   toDateOnlyString,
-} from "@personal-ui/ui";
+} from "@adem.rejeb/ui";
 
 describe("parseDateValue", () => {
   it("treats YYYY-MM-DD as a local calendar date (no UTC shift)", () => {

@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import { ThemeProvider } from "@personal-ui/ui";
+import { ThemeProvider } from "@adem.rejeb/ui";
 import {
   generateCode,
   getEntry,

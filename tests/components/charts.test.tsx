@@ -12,7 +12,7 @@ import {
   sliceAngles,
   stackSeries,
   stackTotal,
-} from "@personal-ui/ui";
+} from "@adem.rejeb/ui";
 
 const CATEGORIES = ["Jan", "Feb", "Mar"];
 const SERIES = [

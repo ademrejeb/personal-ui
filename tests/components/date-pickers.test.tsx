@@ -6,7 +6,7 @@ import {
   DateRangePicker,
   isSameDay,
   TimePicker,
-} from "@personal-ui/ui";
+} from "@adem.rejeb/ui";
 
 describe("Calendar", () => {
   it("renders a labelled grid for the visible month", () => {

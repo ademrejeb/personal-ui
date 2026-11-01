@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { Avatar, Badge, Table, Tag } from "@personal-ui/ui";
+import { Avatar, Badge, Table, Tag } from "@adem.rejeb/ui";
 
 describe("Badge", () => {
   it("applies the variant class and size", () => {

@@ -1,4 +1,4 @@
-import { CopyButton } from "@personal-ui/ui";
+import { CopyButton } from "@adem.rejeb/ui";
 
 interface CodePanelProps {
   code: string;

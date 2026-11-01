@@ -1,5 +1,5 @@
 import { Blocks, LayoutGrid, Palette, Search } from "lucide-react";
-import { ThemeToggle, VersionBadge } from "@personal-ui/ui";
+import { ThemeToggle, VersionBadge } from "@adem.rejeb/ui";
 import { navigate, type Route } from "../lib/router";
 import pkg from "../../package.json";
 

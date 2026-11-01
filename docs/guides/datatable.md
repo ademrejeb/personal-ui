@@ -10,7 +10,7 @@ concern: every feature accepts an optional `value` prop (controlled) plus a
 ## Quick start
 
 ```tsx
-import { DataTable, type Column } from "@personal-ui/ui";
+import { DataTable, type Column } from "@adem.rejeb/ui";
 
 interface Person {
   id: string;

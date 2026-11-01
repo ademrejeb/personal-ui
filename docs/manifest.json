@@ -1,6 +1,6 @@
 {
   "$schema": "https://ui.local/schemas/manifest.v1.json",
-  "name": "@personal-ui/ui",
+  "name": "@adem.rejeb/ui",
   "version": "0.1.0",
   "generatedBy": "scripts/build-manifest.mjs",
   "categories": [

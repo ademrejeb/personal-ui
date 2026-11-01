@@ -8,7 +8,7 @@ import {
   optionEquals,
   useListbox,
   type SelectOption,
-} from "@personal-ui/ui";
+} from "@adem.rejeb/ui";
 
 const OPTIONS: SelectOption<string>[] = [
   { value: "a", label: "Alpha" },

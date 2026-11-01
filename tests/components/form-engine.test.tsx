@@ -10,7 +10,7 @@ import {
   useController,
   useField,
   useForm,
-} from "@personal-ui/ui";
+} from "@adem.rejeb/ui";
 
 function Demo({ onSubmit }: { onSubmit: (values: { email: string }) => void }) {
   const form = useForm({

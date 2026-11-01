@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { SurveyRenderer, evaluateCondition, compileExpression } from "@personal-ui/ui";
-import type { SurveySchema } from "@personal-ui/ui";
+import { SurveyRenderer, evaluateCondition, compileExpression } from "@adem.rejeb/ui";
+import type { SurveySchema } from "@adem.rejeb/ui";
 
 const schema: SurveySchema = {
   version: 1,

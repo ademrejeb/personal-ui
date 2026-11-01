@@ -23,8 +23,8 @@ import {
   Table,
   Tag,
   Timeline,
-} from "@personal-ui/ui";
-import type { Column, DescriptionItem, SortState, Status } from "@personal-ui/ui";
+} from "@adem.rejeb/ui";
+import type { Column, DescriptionItem, SortState, Status } from "@adem.rejeb/ui";
 import type { ComponentEntry } from "./types";
 import { bool, num, pick, str } from "./demo";
 import { jsx } from "../lib/jsx";

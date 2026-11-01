@@ -1,5 +1,5 @@
 import { act, render, screen } from "@testing-library/react";
-import { ThemeProvider, useTheme } from "@personal-ui/ui";
+import { ThemeProvider, useTheme } from "@adem.rejeb/ui";
 
 function Probe() {
   const { theme, setTheme } = useTheme();
@@ -32,7 +32,7 @@ describe("ThemeProvider", () => {
 
     act(() => screen.getByRole("button", { name: "light" }).click());
     expect(document.documentElement).toHaveAttribute("data-theme", "light");
-    expect(window.localStorage.getItem("personal-ui-theme")).toBe("light");
+    expect(window.localStorage.getItem("adem.rejeb-theme")).toBe("light");
     expect(screen.getByTestId("theme")).toHaveTextContent("light");
   });
 

@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { Checkbox, Input, Select, Switch, Textarea } from "@personal-ui/ui";
+import { Checkbox, Input, Select, Switch, Textarea } from "@adem.rejeb/ui";
 
 describe("Input", () => {
   it("reflects size and invalid state", () => {

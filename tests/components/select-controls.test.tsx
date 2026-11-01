@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { Combobox, MultiSelect, type SelectOption } from "@personal-ui/ui";
+import { Combobox, MultiSelect, type SelectOption } from "@adem.rejeb/ui";
 
 const OPTIONS: SelectOption<string>[] = [
   { value: "eng", label: "Engineering", group: "Teams" },

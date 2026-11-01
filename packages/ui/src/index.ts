@@ -1,11 +1,11 @@
 "use client";
 
 /**
- * @personal-ui/ui — public API.
+ * @adem.rejeb/ui — public API.
  *
  * Import the theme once (choose one):
- *   import "@personal-ui/ui/styles.css"; // reset + tokens + components
- *   import "@personal-ui/ui/tokens.css"; // tokens only
+ *   import "@adem.rejeb/ui/styles.css"; // reset + tokens + components
+ *   import "@adem.rejeb/ui/tokens.css"; // tokens only
  *
  * Every component is independently importable and tree-shakeable.
  */

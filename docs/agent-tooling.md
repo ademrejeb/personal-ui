@@ -1,7 +1,7 @@
 # Agent tooling: Graphify and Ponytail
 
 This repo uses two external agent-side tools. Neither ships in the published
-`@personal-ui/ui` bundle, and neither is a runtime dependency of the component
+`@adem.rejeb/ui` bundle, and neither is a runtime dependency of the component
 library or the lab.
 
 | Tool | What it is | License | Runtime dependency? |

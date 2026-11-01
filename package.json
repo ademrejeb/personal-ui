@@ -1,5 +1,5 @@
 {
-  "name": "personal-ui",
+  "name": "adem.rejeb",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -10,11 +10,11 @@
     "apps/*"
   ],
   "scripts": {
-    "dev": "npm run dev --workspace @personal-ui/component-lab",
+    "dev": "npm run dev --workspace @adem.rejeb/component-lab",
     "build": "npm run build:ui && npm run build:lab",
-    "build:ui": "npm run build --workspace @personal-ui/ui",
-    "build:lab": "npm run build --workspace @personal-ui/component-lab",
-    "preview": "npm run preview --workspace @personal-ui/component-lab",
+    "build:ui": "npm run build --workspace @adem.rejeb/ui",
+    "build:lab": "npm run build --workspace @adem.rejeb/component-lab",
+    "preview": "npm run preview --workspace @adem.rejeb/component-lab",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",

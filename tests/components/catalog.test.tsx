@@ -22,7 +22,7 @@ import {
   useNotification,
   type MessageScrollerHandle,
   type NotificationOptions,
-} from "@personal-ui/ui";
+} from "@adem.rejeb/ui";
 
 function NotifyButton({ options }: { options: NotificationOptions }) {
   const { notify } = useNotification();

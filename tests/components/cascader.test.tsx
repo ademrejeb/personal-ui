@@ -1,6 +1,6 @@
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { Cascader, findCascaderOption, resolveCascaderPath, type CascaderOption } from "@personal-ui/ui";
+import { Cascader, findCascaderOption, resolveCascaderPath, type CascaderOption } from "@adem.rejeb/ui";
 
 const OPTIONS: CascaderOption[] = [
   {

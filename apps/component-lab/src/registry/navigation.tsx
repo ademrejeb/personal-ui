@@ -13,9 +13,9 @@ import {
   Stepper,
   Tabs,
   TreeView,
-} from "@personal-ui/ui";
+} from "@adem.rejeb/ui";
 import type { ComponentEntry } from "./types";
-import type { TreeItem } from "@personal-ui/ui";
+import type { TreeItem } from "@adem.rejeb/ui";
 import { bool, num, pick, str } from "./demo";
 import { jsx } from "../lib/jsx";
 

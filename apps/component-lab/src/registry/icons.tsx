@@ -1,4 +1,4 @@
-import { Icon, iconNames, iconRegistry, type IconSize, Button } from "@personal-ui/ui";
+import { Icon, iconNames, iconRegistry, type IconSize, Button } from "@adem.rejeb/ui";
 import { Download } from "lucide-react";
 import type { ComponentEntry } from "./types";
 import { pick } from "./demo";

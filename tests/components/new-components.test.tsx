@@ -10,7 +10,7 @@ import {
   ThemeScript,
   formatRelativeTime,
   useDisclosure,
-} from "@personal-ui/ui";
+} from "@adem.rejeb/ui";
 
 const NOW = new Date("2026-01-01T15:00:00.000Z");
 
@@ -353,7 +353,7 @@ describe("useDisclosure", () => {
 describe("ThemeScript", () => {
   it("serializes the storage key and default theme", () => {
     const html = renderToStaticMarkup(<ThemeScript />);
-    expect(html).toContain("personal-ui-theme");
+    expect(html).toContain("adem.rejeb-theme");
     expect(html).toContain("system");
     expect(html).toContain("data-theme");
   });

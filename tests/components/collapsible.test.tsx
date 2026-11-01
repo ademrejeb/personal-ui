@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { Collapsible } from "@personal-ui/ui";
+import { Collapsible } from "@adem.rejeb/ui";
 
 function Example(props: {
   open?: boolean;

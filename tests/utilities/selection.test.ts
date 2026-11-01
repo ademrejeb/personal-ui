@@ -8,7 +8,7 @@ import {
   setKeys,
   toggleKey,
   useSelection,
-} from "@personal-ui/ui";
+} from "@adem.rejeb/ui";
 
 describe("selection helpers", () => {
   it("toggles a key on and off", () => {

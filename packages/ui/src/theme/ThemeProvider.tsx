@@ -71,7 +71,7 @@ function applyTheme(target: HTMLElement, theme: Theme): void {
 export function ThemeProvider({
   children,
   defaultTheme = "system",
-  storageKey = "personal-ui-theme",
+  storageKey = "adem.rejeb-theme",
   target,
   disableTransitionOnChange = true,
 }: ThemeProviderProps): ReactNode {

@@ -11,7 +11,7 @@ import {
   Toolbar,
   UserMenu,
   VersionBadge,
-} from "@personal-ui/ui";
+} from "@adem.rejeb/ui";
 import type { ComponentEntry } from "./types";
 import { bool, num, pick, str } from "./demo";
 import { jsx } from "../lib/jsx";

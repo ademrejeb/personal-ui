@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { TreeSelect, type TreeItem } from "@personal-ui/ui";
+import { TreeSelect, type TreeItem } from "@adem.rejeb/ui";
 
 const ITEMS: TreeItem[] = [
   {

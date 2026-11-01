@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { Navbar, Sidebar } from "@personal-ui/ui";
+import { Navbar, Sidebar } from "@adem.rejeb/ui";
 
 describe("Navbar", () => {
   it("renders brand, links, and an active page marker", () => {

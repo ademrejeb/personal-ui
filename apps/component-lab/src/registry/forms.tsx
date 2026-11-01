@@ -39,14 +39,14 @@ import {
   Transfer,
   TreeSelect,
   useForm,
-} from "@personal-ui/ui";
-import type { CalendarEvent } from "@personal-ui/ui";
-import type { ControlSize } from "@personal-ui/ui";
-import type { CascaderOption } from "@personal-ui/ui";
-import type { TransferItem } from "@personal-ui/ui";
-import type { TreeItem } from "@personal-ui/ui";
-import { SurveyBuilder, Editor } from "@personal-ui/ui";
-import { FormBuilderV2 } from "@personal-ui/ui";
+} from "@adem.rejeb/ui";
+import type { CalendarEvent } from "@adem.rejeb/ui";
+import type { ControlSize } from "@adem.rejeb/ui";
+import type { CascaderOption } from "@adem.rejeb/ui";
+import type { TransferItem } from "@adem.rejeb/ui";
+import type { TreeItem } from "@adem.rejeb/ui";
+import { SurveyBuilder, Editor } from "@adem.rejeb/ui";
+import { FormBuilderV2 } from "@adem.rejeb/ui";
 import type { ComponentEntry } from "./types";
 import { bool, num, pick, str } from "./demo";
 import { jsx } from "../lib/jsx";

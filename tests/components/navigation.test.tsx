@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { Tabs } from "@personal-ui/ui";
+import { Tabs } from "@adem.rejeb/ui";
 
 function TabsDemo() {
   return (

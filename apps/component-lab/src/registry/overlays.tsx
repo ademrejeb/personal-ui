@@ -19,8 +19,8 @@ import {
   Tooltip,
   Tour,
   type CommandPaletteItem,
-} from "@personal-ui/ui";
-import type { ModalSize, Placement, SheetSide } from "@personal-ui/ui";
+} from "@adem.rejeb/ui";
+import type { ModalSize, Placement, SheetSide } from "@adem.rejeb/ui";
 import type { ComponentEntry } from "./types";
 import { bool, num, pick, str } from "./demo";
 

@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from "vitest";
 import { fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { ContextMenu, MenuBar, NavigationMenu } from "@personal-ui/ui";
+import { ContextMenu, MenuBar, NavigationMenu } from "@adem.rejeb/ui";
 
 describe("NavigationMenu", () => {
   it("opens a panel from its trigger and closes on Escape", async () => {

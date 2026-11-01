@@ -1,6 +1,6 @@
 import { fireEvent, render, screen, act } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { HoverCard } from "@personal-ui/ui";
+import { HoverCard } from "@adem.rejeb/ui";
 
 function Example(props: {
   open?: boolean;

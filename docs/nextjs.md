@@ -1,6 +1,6 @@
 # Using Personal UI with Next.js
 
-`@personal-ui/ui` ships a single ESM bundle that starts with `"use client"` and
+`@adem.rejeb/ui` ships a single ESM bundle that starts with `"use client"` and
 externalises `react`, `react-dom`, and `lucide-react`. That means Next.js treats
 the package as a client boundary automatically — no `transpilePackages`, custom
 webpack config, or CSS-in-JS setup is required.
@@ -8,7 +8,7 @@ webpack config, or CSS-in-JS setup is required.
 ## Install
 
 ```bash
-npm install @personal-ui/ui react react-dom lucide-react
+npm install @adem.rejeb/ui react react-dom lucide-react
 ```
 
 ## App Router
@@ -20,8 +20,8 @@ so the stored theme is applied before first paint, and wrap the app in
 ```tsx
 // app/layout.tsx
 import type { ReactNode } from "react";
-import "@personal-ui/ui/styles.css";
-import { ThemeProvider, ThemeScript } from "@personal-ui/ui";
+import "@adem.rejeb/ui/styles.css";
+import { ThemeProvider, ThemeScript } from "@adem.rejeb/ui";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -41,7 +41,7 @@ Then use components in any page or component:
 
 ```tsx
 // app/page.tsx
-import { Button, Card, CardHeader, Stack, Text } from "@personal-ui/ui";
+import { Button, Card, CardHeader, Stack, Text } from "@adem.rejeb/ui";
 
 export default function Page() {
   return (
@@ -80,7 +80,7 @@ export default async function UsersPage() {
 // app/users/user-table.tsx (Client Component)
 "use client";
 
-import { DataTable } from "@personal-ui/ui";
+import { DataTable } from "@adem.rejeb/ui";
 
 export function UserTable({ users }: { users: User[] }) {
   return <DataTable rows={users} columns={columns} />;
@@ -96,8 +96,8 @@ Components.
 ```tsx
 // pages/_app.tsx
 import type { AppProps } from "next/app";
-import "@personal-ui/ui/styles.css";
-import { ThemeProvider } from "@personal-ui/ui";
+import "@adem.rejeb/ui/styles.css";
+import { ThemeProvider } from "@adem.rejeb/ui";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -111,7 +111,7 @@ export default function App({ Component, pageProps }: AppProps) {
 ```tsx
 // pages/_document.tsx
 import { Head, Html, Main, NextScript } from "next/document";
-import { ThemeScript } from "@personal-ui/ui";
+import { ThemeScript } from "@adem.rejeb/ui";
 
 export default function Document() {
   return (
@@ -130,9 +130,9 @@ export default function Document() {
 
 ## Styles
 
-- `@personal-ui/ui/styles.css` — reset, tokens, base, and every component style.
+- `@adem.rejeb/ui/styles.css` — reset, tokens, base, and every component style.
   Import it once at the app entry.
-- `@personal-ui/ui/tokens.css` — tokens only, if you bring your own reset.
+- `@adem.rejeb/ui/tokens.css` — tokens only, if you bring your own reset.
 
 Global CSS imports are supported in the App Router root layout and in
 `pages/_app.tsx`. Do not import the stylesheet from a component that may render
@@ -143,7 +143,7 @@ more than once.
 ```tsx
 "use client";
 
-import { useTheme } from "@personal-ui/ui";
+import { useTheme } from "@adem.rejeb/ui";
 
 export function ThemeSwitcher() {
   const { theme, setTheme } = useTheme();
@@ -168,7 +168,7 @@ when you need different markup but the same behavior:
 ```tsx
 "use client";
 
-import { useDisclosure } from "@personal-ui/ui";
+import { useDisclosure } from "@adem.rejeb/ui";
 
 export function Details() {
   const { open, onToggle } = useDisclosure();
@@ -191,7 +191,7 @@ Available hooks include `useDisclosure`, `useInlineEdit`, `useSplitPane`,
 
 | Symptom | Fix |
 | --- | --- |
-| Styles are missing | Import `@personal-ui/ui/styles.css` once in the root layout or `_app.tsx`. |
+| Styles are missing | Import `@adem.rejeb/ui/styles.css` once in the root layout or `_app.tsx`. |
 | Light flash before hydration | Render `ThemeScript` in the document head. |
 | “useState only works in a Client Component” | Add `"use client"` to the file that owns the hook or event handler, or move that component into its own client file. |
 | Icons are missing | Install `lucide-react`; it is a required peer dependency. |

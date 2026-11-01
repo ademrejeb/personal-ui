@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { Button, CopyButton, IconButton, ToggleGroup, ToggleGroupItem } from "@personal-ui/ui";
+import { Button, CopyButton, IconButton, ToggleGroup, ToggleGroupItem } from "@adem.rejeb/ui";
 
 describe("Button", () => {
   it("renders its label and defaults to type=button", () => {

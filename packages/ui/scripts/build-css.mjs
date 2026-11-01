@@ -28,13 +28,13 @@ function inline(file, stack = []) {
 
 function write(entry, out) {
   const css = inline(resolve(srcDir, entry));
-  const banner = `/* @personal-ui/ui — generated from ${entry}. Do not edit directly. */\n`;
+  const banner = `/* @adem.rejeb/ui — generated from ${entry}. Do not edit directly. */\n`;
   mkdirSync(distDir, { recursive: true });
   writeFileSync(resolve(distDir, out), banner + css, "utf8");
   process.stdout.write(`  ✓ dist/${out}\n`);
 }
 
-console.log("@personal-ui/ui: building CSS entries");
+console.log("@adem.rejeb/ui: building CSS entries");
 write("styles/index.css", "styles.css");
 write("tokens/tokens.css", "tokens.css");
-console.log(`@personal-ui/ui: inlined ${seen.size} source files`);
+console.log(`@adem.rejeb/ui: inlined ${seen.size} source files`);

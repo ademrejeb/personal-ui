@@ -1,6 +1,6 @@
 import { useMemo } from "react";
-import { CommandPalette as UiCommandPalette } from "@personal-ui/ui";
-import type { CommandPaletteItem } from "@personal-ui/ui";
+import { CommandPalette as UiCommandPalette } from "@adem.rejeb/ui";
+import type { CommandPaletteItem } from "@adem.rejeb/ui";
 import { navigate } from "../lib/router";
 import { registry } from "../registry";
 

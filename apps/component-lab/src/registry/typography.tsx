@@ -9,7 +9,7 @@ import {
   Link,
   Text,
   Truncate,
-} from "@personal-ui/ui";
+} from "@adem.rejeb/ui";
 import type {
   HeadingAlign,
   HeadingLevel,
@@ -20,7 +20,7 @@ import type {
   TextSize,
   TextTone,
   TextWeight,
-} from "@personal-ui/ui";
+} from "@adem.rejeb/ui";
 import type { ComponentEntry } from "./types";
 import { bool, num, pick, str } from "./demo";
 import { jsx } from "../lib/jsx";
@@ -30,7 +30,7 @@ const BLOCKQUOTE_TEXT =
 const TEXT_SAMPLE = "The quick brown fox jumps over the lazy dog.";
 const TRUNCATE_TEXT =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-const CODE_SAMPLE = `import { Button } from "@personal-ui/ui";
+const CODE_SAMPLE = `import { Button } from "@adem.rejeb/ui";
 
 export function App() {
   return <Button variant="primary">Click me</Button>;
@@ -129,12 +129,12 @@ export const typographyEntries: ComponentEntry[] = [
     description: "Inline code token with a subtle background, rendering a native code element.",
     keywords: ["code", "inline", "token", "monospace"],
     controls: [
-      { name: "children", type: "text", label: "Content", defaultValue: "npm install @personal-ui/ui" },
+      { name: "children", type: "text", label: "Content", defaultValue: "npm install @adem.rejeb/ui" },
     ],
-    render: (state) => <Code>{str(state, "children", "npm install @personal-ui/ui")}</Code>,
+    render: (state) => <Code>{str(state, "children", "npm install @adem.rejeb/ui")}</Code>,
     code: (state) =>
       jsx("Code", {
-        children: str(state, "children", "npm install @personal-ui/ui"),
+        children: str(state, "children", "npm install @adem.rejeb/ui"),
       }),
     props: [
       {

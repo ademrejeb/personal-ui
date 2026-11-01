@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { Box, Heading, Stack, Text } from "@personal-ui/ui";
+import { Box, Heading, Stack, Text } from "@adem.rejeb/ui";
 
 describe("Box", () => {
   it("renders a div by default", () => {

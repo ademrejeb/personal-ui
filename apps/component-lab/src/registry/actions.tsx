@@ -8,7 +8,7 @@ import {
   ToggleButton,
   ToggleGroup,
   ToggleGroupItem,
-} from "@personal-ui/ui";
+} from "@adem.rejeb/ui";
 import type { ComponentEntry } from "./types";
 import { bool, num, pick, str } from "./demo";
 import { jsx } from "../lib/jsx";
@@ -309,7 +309,7 @@ export const actionsEntries: ComponentEntry[] = [
     description: "Copies a value to the clipboard and reports success to all users.",
     keywords: ["clipboard", "copy", "code"],
     controls: [
-      { name: "value", type: "text", defaultValue: "npm install @personal-ui/ui" },
+      { name: "value", type: "text", defaultValue: "npm install @adem.rejeb/ui" },
       { name: "label", type: "text", defaultValue: "Copy" },
       { name: "copiedLabel", type: "text", label: "Copied label", defaultValue: "Copied" },
       { name: "iconOnly", type: "boolean", label: "Icon only", defaultValue: false },
@@ -317,7 +317,7 @@ export const actionsEntries: ComponentEntry[] = [
     ],
     render: (state) => (
       <CopyButton
-        value={str(state, "value", "npm install @personal-ui/ui")}
+        value={str(state, "value", "npm install @adem.rejeb/ui")}
         label={str(state, "label", "Copy")}
         copiedLabel={str(state, "copiedLabel", "Copied")}
         iconOnly={bool(state, "iconOnly")}
@@ -327,7 +327,7 @@ export const actionsEntries: ComponentEntry[] = [
     code: (state) =>
       jsx("CopyButton", {
         props: {
-          value: str(state, "value", "npm install @personal-ui/ui"),
+          value: str(state, "value", "npm install @adem.rejeb/ui"),
           label: str(state, "label", "Copy") === "Copy" ? undefined : str(state, "label", "Copy"),
           iconOnly: bool(state, "iconOnly"),
           variant: pick(state, "variant", "ghost") === "ghost" ? undefined : pick(state, "variant", "ghost"),

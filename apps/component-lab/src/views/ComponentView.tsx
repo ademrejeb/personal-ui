@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Badge } from "@personal-ui/ui";
+import { Badge } from "@adem.rejeb/ui";
 import { generateCode, initialState } from "../registry";
 import type { ComponentEntry, DemoState, DemoValue } from "../registry/types";
 import { CodePanel } from "../components/CodePanel";

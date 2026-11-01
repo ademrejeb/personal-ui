@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { DataTable, type Column } from "@personal-ui/ui";
+import { DataTable, type Column } from "@adem.rejeb/ui";
 
 interface Row {
   id: string;

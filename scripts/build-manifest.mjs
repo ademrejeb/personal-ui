@@ -43,7 +43,7 @@ const entries = registry
 
 const manifest = {
   $schema: "https://ui.local/schemas/manifest.v1.json",
-  name: "@personal-ui/ui",
+  name: "@adem.rejeb/ui",
   version: JSON.parse(
     (await import("node:fs")).readFileSync(path.join(root, "packages/ui/package.json"), "utf8"),
   ).version,

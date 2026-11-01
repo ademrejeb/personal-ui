@@ -25,8 +25,8 @@
 
     "baseUrl": ".",
     "paths": {
-      "@personal-ui/ui": ["packages/ui/src/index.ts"],
-      "@personal-ui/ui/*": ["packages/ui/src/*"]
+      "@adem.rejeb/ui": ["packages/ui/src/index.ts"],
+      "@adem.rejeb/ui/*": ["packages/ui/src/*"]
     }
   }
 }

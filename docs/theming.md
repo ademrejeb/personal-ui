@@ -5,8 +5,8 @@ The theme is expressed as a `data-theme` attribute on `<html>` (or any element y
 ## ThemeProvider
 
 ```tsx
-import { ThemeProvider } from "@personal-ui/ui";
-import "@personal-ui/ui/styles.css";
+import { ThemeProvider } from "@adem.rejeb/ui";
+import "@adem.rejeb/ui/styles.css";
 
 <ThemeProvider defaultTheme="dark">
   <App />
@@ -16,7 +16,7 @@ import "@personal-ui/ui/styles.css";
 | Prop | Type | Default | Description |
 | --- | --- | --- | --- |
 | `defaultTheme` | `"light" \| "dark" \| "system"` | `"system"` | Used when nothing is stored. |
-| `storageKey` | `string` | `"personal-ui-theme"` | `localStorage` persistence key. |
+| `storageKey` | `string` | `"adem.rejeb-theme"` | `localStorage` persistence key. |
 | `target` | `HTMLElement \| null` | `<html>` | Receives `data-theme`. |
 | `disableTransitionOnChange` | `boolean` | `true` | Injects a temporary `transition: none` rule during the swap to avoid colour flashing. |
 
@@ -44,7 +44,7 @@ On server-rendered pages, the HTML is painted before React hydrates. Render
 `<html data-theme>` before that first paint:
 
 ```tsx
-import { ThemeProvider, ThemeScript } from "@personal-ui/ui";
+import { ThemeProvider, ThemeScript } from "@adem.rejeb/ui";
 
 <html lang="en" suppressHydrationWarning>
   <head>

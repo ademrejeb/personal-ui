@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Badge, ThemeToggle, useTheme } from "@personal-ui/ui";
+import { Badge, ThemeToggle, useTheme } from "@adem.rejeb/ui";
 import { readCssVariables } from "../lib/tokens";
 
 const COLOR_ROLES = [

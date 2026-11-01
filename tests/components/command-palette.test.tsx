@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { CommandPalette, type CommandPaletteItem } from "@personal-ui/ui";
+import { CommandPalette, type CommandPaletteItem } from "@adem.rejeb/ui";
 
 const ITEMS: CommandPaletteItem[] = [
   { id: "new", label: "New file", group: "File", keywords: ["create"] },

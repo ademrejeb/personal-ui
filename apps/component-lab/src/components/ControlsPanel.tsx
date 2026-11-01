@@ -1,4 +1,4 @@
-import { Input, Select, Switch, Textarea } from "@personal-ui/ui";
+import { Input, Select, Switch, Textarea } from "@adem.rejeb/ui";
 import type { Control, DemoState, DemoValue } from "../registry/types";
 
 interface ControlsPanelProps {

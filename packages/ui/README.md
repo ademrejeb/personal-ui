@@ -1,4 +1,4 @@
-# @personal-ui/ui
+# @adem.rejeb/ui
 
 A premium, accessible, token-driven React 19 design system.
 
@@ -11,7 +11,7 @@ A premium, accessible, token-driven React 19 design system.
 ## Install
 
 ```bash
-npm install @personal-ui/ui react react-dom lucide-react
+npm install @adem.rejeb/ui react react-dom lucide-react
 ```
 
 `react`, `react-dom`, and `lucide-react` are peer dependencies (`react`/`react-dom` `^19`).
@@ -21,13 +21,13 @@ npm install @personal-ui/ui react react-dom lucide-react
 Import the theme once, at your app entry:
 
 ```ts
-import "@personal-ui/ui/styles.css"; // reset + tokens + all component styles
+import "@adem.rejeb/ui/styles.css"; // reset + tokens + all component styles
 ```
 
 or, if you only want the design tokens (bring your own reset):
 
 ```ts
-import "@personal-ui/ui/tokens.css";
+import "@adem.rejeb/ui/tokens.css";
 ```
 
 The stylesheet is plain CSS with no preprocessor. Everything is scoped by `ui-` prefixed BEM class names, so it will not collide with your application styles.
@@ -39,8 +39,8 @@ The package is a drop-in for the App Router and the Pages Router. See
 
 ```tsx
 // app/layout.tsx
-import "@personal-ui/ui/styles.css";
-import { ThemeProvider, ThemeScript } from "@personal-ui/ui";
+import "@adem.rejeb/ui/styles.css";
+import { ThemeProvider, ThemeScript } from "@adem.rejeb/ui";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -62,8 +62,8 @@ loader, or provider wrapper is required.
 ## Usage
 
 ```tsx
-import { ThemeProvider } from "@personal-ui/ui";
-import "@personal-ui/ui/styles.css";
+import { ThemeProvider } from "@adem.rejeb/ui";
+import "@adem.rejeb/ui/styles.css";
 
 export function App() {
   return (
@@ -77,7 +77,7 @@ export function App() {
 Then use components anywhere below the provider:
 
 ```tsx
-import { Button, Card, CardHeader, Stack, Text } from "@personal-ui/ui";
+import { Button, Card, CardHeader, Stack, Text } from "@adem.rejeb/ui";
 
 <Card>
   <CardHeader title="Team" subtitle="3 members" />
@@ -95,7 +95,7 @@ import { Button, Card, CardHeader, Stack, Text } from "@personal-ui/ui";
 | Prop | Type | Default | Description |
 | --- | --- | --- | --- |
 | `defaultTheme` | `"light" \| "dark" \| "system"` | `"system"` | Initial preference when nothing is stored. |
-| `storageKey` | `string` | `"personal-ui-theme"` | `localStorage` key for persistence. |
+| `storageKey` | `string` | `"adem.rejeb-theme"` | `localStorage` key for persistence. |
 | `target` | `HTMLElement \| null` | `<html>` | Element that receives `data-theme`. |
 | `disableTransitionOnChange` | `boolean` | `true` | Suppress color transitions during swaps. |
 
@@ -147,7 +147,7 @@ For interactive prop tables and live previews of every component, run the compon
 ## Shared types
 
 ```ts
-import type { ControlSize, Size, Status, Align, Justify, Space } from "@personal-ui/ui";
+import type { ControlSize, Size, Status, Align, Justify, Space } from "@adem.rejeb/ui";
 ```
 
 - `ControlSize = "xs" | "sm" | "md" | "lg" | "xl"`

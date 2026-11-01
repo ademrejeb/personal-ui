@@ -23,7 +23,7 @@ function serialize(value: string): string {
  * `ThemeProvider`, so the two stay in sync.
  */
 export function ThemeScript({
-  storageKey = "personal-ui-theme",
+  storageKey = "adem.rejeb-theme",
   defaultTheme = "system",
   nonce,
 }: ThemeScriptProps) {

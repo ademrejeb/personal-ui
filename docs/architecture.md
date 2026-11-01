@@ -3,8 +3,8 @@
 The repository is an npm-workspaces monorepo with two publishable-facing units and a shared test suite.
 
 ```
-packages/ui              @personal-ui/ui         the design system library
-apps/component-lab       @personal-ui/component-lab   the showcase / playground
+packages/ui              @adem.rejeb/ui         the design system library
+apps/component-lab       @adem.rejeb/component-lab   the showcase / playground
 tests/                   Vitest suites and Playwright specs
 ```
 
@@ -32,7 +32,7 @@ node scripts/build-css.mjs       → dist/styles.css (inlined @import graph)
                                     dist/tokens.css (tokens only)
 ```
 
-The library ships **JavaScript plus plain CSS**. There is no CSS-in-JS runtime and no CSS modules; consumers import `@personal-ui/ui/styles.css` once and every component class is globally available. This keeps the runtime footprint minimal and makes theming a matter of overriding custom properties.
+The library ships **JavaScript plus plain CSS**. There is no CSS-in-JS runtime and no CSS modules; consumers import `@adem.rejeb/ui/styles.css` once and every component class is globally available. This keeps the runtime footprint minimal and makes theming a matter of overriding custom properties.
 
 ### Component conventions
 
@@ -55,7 +55,7 @@ A Vite single-page app that documents and exercises the library.
 - **Router** (`src/lib/router.ts`): a tiny hash router with `overview`, `tokens`, `theme`, and `component/:id` routes.
 - **Token inspector** (`src/lib/tokens.ts`): reads the live CSS custom properties off `document.documentElement` and groups/classifies them.
 
-The lab imports the library through Vite aliases (`@personal-ui/ui` → library source, `@personal-ui/ui/styles.css` → `styles/index.css`), so it always reflects the current source.
+The lab imports the library through Vite aliases (`@adem.rejeb/ui` → library source, `@adem.rejeb/ui/styles.css` → `styles/index.css`), so it always reflects the current source.
 
 ## Testing
 

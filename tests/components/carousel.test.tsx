@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { Carousel } from "@personal-ui/ui";
+import { Carousel } from "@adem.rejeb/ui";
 
 const SLIDES = ["One", "Two", "Three", "Four", "Five"];
 

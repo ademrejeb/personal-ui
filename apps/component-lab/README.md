@@ -1,6 +1,6 @@
-# @personal-ui/component-lab
+# @adem.rejeb/component-lab
 
-An interactive Storybook-style app for the [`@personal-ui/ui`](../../packages/ui) design system.
+An interactive Storybook-style app for the [`@adem.rejeb/ui`](../../packages/ui) design system.
 
 ## Features
 
@@ -21,7 +21,7 @@ npm run build:lab    # static production build → dist/
 npm run preview      # serve the production build
 ```
 
-The app aliases `@personal-ui/ui` to the library **source** (`packages/ui/src/index.ts`) and `@personal-ui/ui/styles.css` to `packages/ui/src/styles/index.css`, so changes to the library are reflected without a rebuild.
+The app aliases `@adem.rejeb/ui` to the library **source** (`packages/ui/src/index.ts`) and `@adem.rejeb/ui/styles.css` to `packages/ui/src/styles/index.css`, so changes to the library are reflected without a rebuild.
 
 ## Structure
 

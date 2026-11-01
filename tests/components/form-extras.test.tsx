@@ -10,7 +10,7 @@ import {
   useFormState,
   useWatch,
   type SelectOption,
-} from "@personal-ui/ui";
+} from "@adem.rejeb/ui";
 
 const FRUITS: SelectOption<string>[] = [
   { value: "apple", label: "Apple" },

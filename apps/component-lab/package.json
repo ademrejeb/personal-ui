@@ -1,8 +1,8 @@
 {
-  "name": "@personal-ui/component-lab",
+  "name": "@adem.rejeb/component-lab",
   "version": "0.1.0",
   "private": true,
-  "description": "Interactive component lab, playground, and token inspector for @personal-ui/ui.",
+  "description": "Interactive component lab, playground, and token inspector for @adem.rejeb/ui.",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,7 +10,7 @@
     "preview": "vite preview --port 4173 --strictPort"
   },
   "dependencies": {
-    "@personal-ui/ui": "0.1.0",
+    "@adem.rejeb/ui": "0.1.0",
     "lucide-react": "^0.469.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

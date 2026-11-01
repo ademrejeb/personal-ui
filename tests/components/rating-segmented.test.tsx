@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { Rating, SegmentedControl } from "@personal-ui/ui";
+import { Rating, SegmentedControl } from "@adem.rejeb/ui";
 
 describe("Rating", () => {
   it("exposes a radiogroup with one radio per star", () => {

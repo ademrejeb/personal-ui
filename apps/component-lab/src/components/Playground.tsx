@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { cx } from "@personal-ui/ui";
+import { cx } from "@adem.rejeb/ui";
 
 interface PlaygroundProps {
   children: ReactNode;

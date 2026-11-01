@@ -4,8 +4,8 @@ Guidance for agents and humans working in this repository.
 
 ## What this is
 
-A personal React 19 + TypeScript design system (`@personal-ui/ui`) plus an
-interactive documentation app (`@personal-ui/component-lab`). It is a single npm
+A personal React 19 + TypeScript design system (`@adem.rejeb/ui`) plus an
+interactive documentation app (`@adem.rejeb/component-lab`). It is a single npm
 workspaces monorepo.
 
 ```
@@ -24,7 +24,7 @@ Run from the repository root.
 | --- | --- |
 | `npm run dev` | Component lab dev server (http://localhost:5173). |
 | `npm run build` | Build the library **and** the lab. |
-| `npm run build:ui` | Build only `@personal-ui/ui` (JS + `dist/styles.css` + `dist/tokens.css`). |
+| `npm run build:ui` | Build only `@adem.rejeb/ui` (JS + `dist/styles.css` + `dist/tokens.css`). |
 | `npm run build:lab` | Build only the lab. |
 | `npm run preview` | Preview the built lab (port 4173, used by Playwright). |
 | `npm test` | Run the full Vitest suite once. |

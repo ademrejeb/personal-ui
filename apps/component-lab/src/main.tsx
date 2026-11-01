@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { ThemeProvider } from "@personal-ui/ui";
-import "@personal-ui/ui/styles.css";
+import { ThemeProvider } from "@adem.rejeb/ui";
+import "@adem.rejeb/ui/styles.css";
 import "./lab.css";
 import { App } from "./App";
 
@@ -10,7 +10,7 @@ if (!container) throw new Error("Root element #root not found.");
 
 createRoot(container).render(
   <StrictMode>
-    <ThemeProvider defaultTheme="dark" storageKey="personal-ui-lab-theme">
+    <ThemeProvider defaultTheme="dark" storageKey="adem.rejeb-lab-theme">
       <App />
     </ThemeProvider>
   </StrictMode>,

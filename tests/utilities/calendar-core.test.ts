@@ -7,7 +7,7 @@ import {
   isDateInRange,
   isDayInEvent,
   normalizeEvent,
-} from "@personal-ui/ui";
+} from "@adem.rejeb/ui";
 
 describe("buildMonthMatrix", () => {
   it("starts on the week containing the 1st and pads with adjacent days", () => {
