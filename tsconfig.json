@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["vite/client", "vitest/globals", "node"]
+  },
+  "include": [
+    "packages/ui/src",
+    "apps/component-lab/src",
+    "tests",
+    "vitest.config.ts",
+    "playwright.config.ts"
+  ],
+  "exclude": ["**/dist", "**/node_modules"]
+}
