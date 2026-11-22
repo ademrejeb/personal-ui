@@ -40,9 +40,14 @@ export const Grid = forwardRef<HTMLDivElement, GridProps>(function Grid(
   const computed: CSSProperties = {
     display: "grid",
     gridTemplateColumns: resolveColumns(columns, minItemWidth),
-    gap: rowGap || columnGap ? undefined : spaceVar(gap),
-    rowGap: rowGap !== undefined ? spaceVar(rowGap) : undefined,
-    columnGap: columnGap !== undefined ? spaceVar(columnGap) : undefined,
+    // Same shorthand trap as Stack: never include an undefined rowGap /
+    // columnGap key, or React clears the gap longhands on client renders.
+    ...(rowGap === undefined && columnGap === undefined
+      ? { gap: spaceVar(gap) }
+      : {
+          ...(rowGap !== undefined ? { rowGap: spaceVar(rowGap) } : {}),
+          ...(columnGap !== undefined ? { columnGap: spaceVar(columnGap) } : {}),
+        }),
     alignItems: align ? alignToCss(align) : undefined,
     justifyItems: justify ? justifyToCss(justify) : undefined,
   };

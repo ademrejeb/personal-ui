@@ -45,12 +45,19 @@ export const Stack = polymorphicForwardRef<StackOwnProps, "div">(
     ref: PolymorphicRef<C>,
   ) {
     const Component = (as ?? "div") as ElementType;
+    // Only emit the gap longhands that were actually requested. React clears
+    // an undefined inline style key; emitting `rowGap: undefined` after `gap`
+    // clears the row-gap branch of the `gap` shorthand and collapses the
+    // layout on every client-side render (SSR keeps the raw style string).
     const computed: CSSProperties = {
       display: inline ? "inline-flex" : "flex",
       flexDirection: direction,
-      gap: rowGap || columnGap ? undefined : spaceVar(gap),
-      rowGap: rowGap !== undefined ? spaceVar(rowGap) : undefined,
-      columnGap: columnGap !== undefined ? spaceVar(columnGap) : undefined,
+      ...(rowGap === undefined && columnGap === undefined
+        ? { gap: spaceVar(gap) }
+        : {
+            ...(rowGap !== undefined ? { rowGap: spaceVar(rowGap) } : {}),
+            ...(columnGap !== undefined ? { columnGap: spaceVar(columnGap) } : {}),
+          }),
       alignItems: align ? alignToCss(align) : undefined,
       justifyContent: justify ? justifyToCss(justify) : undefined,
       flexWrap: wrap ? "wrap" : undefined,

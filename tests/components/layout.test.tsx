@@ -45,6 +45,21 @@ describe("Stack", () => {
       gap: "var(--ui-p-space-2, 0.5rem)",
     });
   });
+
+  it("does not emit undefined row/column gap keys that clear the shorthand", () => {
+    // React clears an inline style key whose value is undefined. If `rowGap`
+    // and `columnGap` are always present, they wipe the `gap` shorthand on
+    // client-side renders even though the SSR HTML looks correct.
+    render(
+      <Stack data-testid="stack" gap={3}>
+        <span>a</span>
+        <span>b</span>
+      </Stack>,
+    );
+    const style = screen.getByTestId("stack").getAttribute("style") ?? "";
+    expect(style).toMatch(/(^|;)\s*gap:/);
+    expect(style).not.toMatch(/row-gap|column-gap/);
+  });
 });
 
 describe("Heading", () => {
