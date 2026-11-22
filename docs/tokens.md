@@ -51,6 +51,7 @@ Per-component knobs, prefixed with the component name. Examples:
 
 - `--ui-control-radius`, `--ui-control-pad-x-md`, `--ui-control-border-width`, `--ui-control-gap`
 - `--ui-button-font-weight`, `--ui-button-focus-ring`
+- `--ui-button-height-sm|md|lg`, `--ui-button-pad-x-sm|md|lg`
 - `--ui-input-pad-x`, `--ui-input-placeholder`
 - `--ui-card-pad`, `--ui-card-radius`
 - `--ui-overlay-pad`, `--ui-overlay-radius`, `--ui-overlay-shadow`

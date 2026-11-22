@@ -87,18 +87,18 @@
   border-radius: var(--ui-p-radius-sm);
 }
 .ui-button--sm {
-  height: var(--ui-p-control-sm);
-  padding-inline: var(--ui-p-space-3);
+  height: var(--ui-button-height-sm);
+  padding-inline: var(--ui-button-pad-x-sm);
   font-size: var(--ui-p-text-xs);
 }
 .ui-button--md {
-  height: var(--ui-p-control-md);
-  padding-inline: var(--ui-p-space-4);
+  height: var(--ui-button-height-md);
+  padding-inline: var(--ui-button-pad-x-md);
   font-size: var(--ui-p-text-sm);
 }
 .ui-button--lg {
-  height: var(--ui-p-control-lg);
-  padding-inline: var(--ui-p-space-5);
+  height: var(--ui-button-height-lg);
+  padding-inline: var(--ui-button-pad-x-lg);
   font-size: var(--ui-p-text-sm);
 }
 .ui-button--xl {

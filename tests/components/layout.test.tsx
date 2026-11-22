@@ -23,7 +23,9 @@ describe("Box", () => {
         content
       </Box>,
     );
-    expect(screen.getByTestId("box")).toHaveStyle({ padding: "var(--ui-p-space-4)" });
+    expect(screen.getByTestId("box")).toHaveStyle({
+      padding: "var(--ui-p-space-4, 1rem)",
+    });
   });
 });
 
@@ -37,7 +39,11 @@ describe("Stack", () => {
     );
     const stack = screen.getByTestId("stack");
     expect(stack).toHaveClass("ui-stack");
-    expect(stack).toHaveStyle({ display: "flex", flexDirection: "row", gap: "var(--ui-p-space-2)" });
+    expect(stack).toHaveStyle({
+      display: "flex",
+      flexDirection: "row",
+      gap: "var(--ui-p-space-2, 0.5rem)",
+    });
   });
 });
 

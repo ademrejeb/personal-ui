@@ -23,6 +23,12 @@
   --ui-button-focus-ring: 0 0 0 var(--ui-focus-ring-width) var(--ui-background),
     0 0 0 calc(var(--ui-focus-ring-width) + var(--ui-focus-ring-offset)) var(--ui-focus-ring);
   --ui-button-font-weight: var(--ui-p-weight-medium);
+  --ui-button-height-sm: 2.125rem;
+  --ui-button-height-md: 2.5rem;
+  --ui-button-height-lg: 2.75rem;
+  --ui-button-pad-x-sm: 1rem;
+  --ui-button-pad-x-md: 1.15rem;
+  --ui-button-pad-x-lg: 1.5rem;
 
   /* Input */
   --ui-input-pad-x: var(--ui-p-space-3);
